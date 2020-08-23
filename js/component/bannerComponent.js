@@ -19,9 +19,9 @@ var bannerComponent = {
 	{
 		var _self = this;
 		this.getBannerInfo();
-		setTimeout(function(){
+		//setTimeout(function(){
 			$('#slider').nivoSlider({});
-		},200);
+		//},200);
 	}
 	
 }

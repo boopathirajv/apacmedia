@@ -18,6 +18,7 @@
 		{
 			width:get-theme-property($key: $theme, $variant: 'commonWidth');
 			margin: auto;
+			height: 354px;
 		} 
 		.cls_sliderCont {
 			width: get-theme-property($key: $theme, $variant: 'commonMainWidth');
