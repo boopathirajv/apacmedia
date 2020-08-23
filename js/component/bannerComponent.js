@@ -21,7 +21,7 @@ var bannerComponent = {
 		this.getBannerInfo();
 		setTimeout(function(){
 			$('#slider').nivoSlider({});
-		},100);
+		},200);
 	}
 	
 }
