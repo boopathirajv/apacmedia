@@ -1,0 +1,205 @@
+@mixin get-common-properties($theme:null) {
+    @if $theme != null {
+		body
+		{
+			background-color: get-theme-property($key: $theme, $variant: 'backgroundColor');
+			background: url(#{get-theme-property($key: $theme, $variant: 'commonBgImage')}) top no-repeat fixed;
+			font-family: Arial, Helvetica, sans-serif;
+    		font-size: 12px;    
+		}
+		html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, input, textarea, select {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+		}		
+		:focus {
+			outline: 0;
+		}
+		h1,h2,h3,h4,h5,h6,p,a {
+			font-weight: normal;
+		}
+		a {
+			text-decoration: none;			
+			color: get-theme-property($key: $theme, $variant: 'anchorColor');
+			font-size: 12px;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		a:hover {
+			color: get-theme-property($key: $theme, $variant: 'anchorHoverColor')
+		}
+		b,strong,i,em,p {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		p {
+			font-family: Arial, Helvetica, sans-serif;
+			color: get-theme-property($key: $theme, $variant: 'paragraphColor');
+			font-size: 12px;
+			line-height: 18px;
+			padding: 5px 0;
+		}
+		h1 {
+			font-size: 16px;
+			font-family: 'robotocondensed', Arial, Helvetica, sans-serif;
+			color: get-theme-property($key: $theme, $variant: 'h1Color');
+		}
+	}
+}
+@mixin get-headermenu-properties($theme:null) {
+    @if $theme != null {
+		.cls_headerCont {
+			width: get-theme-property($key: $theme, $variant: 'commonWidth');
+			margin: 0px auto;
+		}
+		
+		header {
+			width: get-theme-property($key: $theme, $variant: 'commonMainWidth');
+			background: #fff;
+			margin: 0px auto;
+		}
+		.cls_headerRight {
+			width: 150px;
+			height: auto;
+			float: right;
+			background: #FFC000;
+			margin-top: -10px;
+			padding: 20px;
+		}
+		.cls_headerMenuCont {
+			height: 50px;
+			clear: both;
+			margin: auto;
+			padding-right: 0px;
+			box-sizing: border-box;
+			width: get-theme-property($key: $theme, $variant: 'commonMainWidth');
+			background-color: #fff;
+		}
+
+		.cls_headerMenuCont>ul {
+			list-style: none;
+			margin: 0 auto;
+			padding: 0;
+			position: relative;
+			width: get-theme-property($key: $theme, $variant: 'commonWidth');
+			height: inherit;
+		}
+
+		.cls_headerMenuCont>ul>li {
+			display: block;
+			float: left;
+			padding: 0;
+			margin: 0;
+		}
+
+		.cls_headerMenuCont>ul>li .cls_headerMenuHead a {
+			padding: 0px 25px;
+			display: block;
+			color: get-theme-property($key: $theme, $variant: 'headerMenuColor');
+			text-decoration: none;
+			box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.2);
+			border-right: 1px solid rgba(255, 255, 255, 0.25);
+			transition: background-color 200ms linear;
+			-moz-transition: background-color 200ms linear;
+			-o-transition: background-color 200ms linear;
+			-webkit-transition: background-color 200ms linear;
+			font-size: 13px;
+			text-transform: uppercase;
+			line-height: 50px;
+			font-family: 'robotocondensed', Arial, Helvetica, sans-serif;
+			font-weight: bold;
+			font-size: 17px;
+		}
+
+		.cls_headerMenuCont>ul>li:last-child .cls_headerMenuHead a {
+			box-shadow: none;
+			border-right: 0;
+		}
+
+		.cls_headerMenuCont>ul>li:hover {
+			margin-left: -1px;
+		}
+
+		.cls_headerMenuCont>ul>li:hover .cls_headerMenuHead a {
+			box-shadow: inset 2px 0 10px -5px rgba(255, 219, 129, 0.6), inset -2px 0 10px -5px rgba(255, 219, 129, 0.6);
+			padding-left: 26px;
+		}
+
+		.cls_headerMenuCont>ul>li>.cls_headerSubList {
+			visibility: hidden;
+			position: absolute;
+			border-top: 0;
+			box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+			background: #fff;
+			top: 100%;
+			color: #575757;
+			opacity: 0;
+			transition: opacity 100ms linear;
+			-moz-transition: opacity 100ms linear;
+			-o-transition: opacity 100ms linear;
+			-webkit-transition: opacity 100ms linear;
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			overflow: hidden;
+			z-index: 30;
+			background: #FB8900;
+		}
+
+		.cls_headerMenuCont>ul>li:hover>.cls_headerSubList {
+			visibility: visible;
+			opacity: 1;
+			margin-left: -1px;
+		}
+
+		ul.cls_headerSubList {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		ul.cls_headerSubList li {
+			display: block;
+		}
+
+		ul.cls_headerSubList li a {
+			display: block;
+			padding: 8px 15px;
+			text-decoration: none;
+			color: #fff;
+			margin: 0;
+			font-family: 'robotocondensed', Arial, Helvetica, sans-serif;
+			font-size: 14px;
+		}
+
+		ul.cls_headerSubList li a:hover {
+			color: #fff;
+		}
+
+		.cls_headerMenuCont ul {
+			background-color: #FFD05C;
+			background-image: -moz-linear-gradient(top, #FFD05C, #FEB52C);
+			background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FFD05C), to(#FEB52C));
+			background-image: -webkit-linear-gradient(top, #FFD05C, #FEB52C);
+			background-image: -o-linear-gradient(top, #FFD05C, #FEB52C);
+			background-image: linear-gradient(to bottom, #FFD05C, #FEB52C);
+			background-repeat: repeat-x;
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffFFD05C', endColorstr='#ffFEB52C', GradientType=0);
+		}
+
+		.cls_headerMenuCont>ul>li:hover .cls_headerMenuHead a {
+			background-color: get-theme-property($key: $theme, $variant: 'headerMenuHoverBgColor');
+			color: get-theme-property($key: $theme, $variant: 'headerMenuHoverColor');
+		}
+
+		.cls_headerMenuCont ul.cls_headerSubList li a:hover {
+			background: #FFC74C;
+		}
+
+		.cls_activeMenu {
+			background-color: get-theme-property($key: $theme, $variant: 'headerMenuActiveBgColor');
+			color: get-theme-property($key: $theme, $variant: 'headerMenuACtiveColor');
+		}
+	}			
+}
+

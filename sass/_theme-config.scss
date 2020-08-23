@@ -1,0 +1,36 @@
+$themes: (
+  primary: (
+	backgroundColor: #FFBC00,
+	anchorColor: #000000,
+	paragraphColor: #474747,
+	h1Color: #000,
+	anchorHoverColor: #ff6c00 !important,
+	headerMenuColor: #000,
+	headerMenuHoverColor:  #fff !important,
+	headerMenuActiveColor:  #fff !important,
+	headerMenuHoverBgColor: #FB8900,
+	headerMenuActiveBGColor:  #FB8900,
+
+	subheaderColor: #000,
+	sideMenuHeaderColor: #2B0D02,
+	sideMenuAnchorColor: #000000,
+	sideSubMenuAnchorColor: #929292,
+	sideSubMenuAnchorHoverColor: #FF6203 !important,
+
+	artHeaderColor: #000,
+	
+	footerHeaderColor: #000,
+	footerDescColor: #7F7B73,
+	footerLinkColor: #7F7B73,
+	footerReadMoreColor: #333,
+	boldTitleColor: #333,
+	bottomMenuColor: #666666,
+	bottomMenuBorderColor: #B6B9BF !important,
+
+	commonBgImage: "../images/bg.jpg", 
+	commonMainWidth: 1000px,
+	commonWidth: 960px,
+	sliderBgImage: "../images/product-showcase-bg.jpg",
+	slideImgBorderColor: #ccc
+  )
+);

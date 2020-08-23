@@ -1,0 +1,15 @@
+@import "theme-mixin";
+@import "theme-header-mixin";
+@import "theme-footer-mixin";
+@import "theme-article-mixin";
+
+@include get-common-properties("primary");
+@include get-theme-properties("primary");
+@include get-sidemenu-properties("primary");
+@include get-headermenu-properties("primary");
+@include get-article-properties("primary");
+@include get-footertopmenu-properties("primary");
+@include get-footerbottommenu-properties("primary");
+@include get-footerbottom-properties("primary");
+@include get-socialmenu-properties("primary");
+

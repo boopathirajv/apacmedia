@@ -1,0 +1,53 @@
+@mixin get-article-properties($theme:null) {
+    @if $theme != null {
+		.cls_articleContainer {
+			width: 700px;
+			height: auto;
+			float: left;
+			margin-left: 20px;
+		}
+		
+		.cls_articleTopContent {
+			display: block;
+			float: left;
+		}
+		
+		.cls_artFirstCont {
+			width: 360px;
+			height: auto;
+			float: left;
+			margin-right: 20px;
+		}
+		
+		.cls_artVideoCont {
+			width: 320px;
+			height: auto;
+			float: left;
+		}
+		
+		.cls_articleBottomCont {
+			width: 700px;
+			height: auto;
+			float: left;
+			padding-top: 30px;
+		}
+		
+		.cls_articleBottomList {
+			width: 228px;
+			height: auto;
+			float: left;
+			margin-right: 8px;
+		}
+		
+		.cls_articleBottomCont div:last-child {
+			margin-right: 0 !important;
+		}
+		
+		.cls_articleContainer h1 {
+			font-size: 23px;
+			font-family: 'robotocondensed', Arial, Helvetica, sans-serif;
+			color: get-theme-property($key: $theme, $variant: 'artHeaderColor');
+		}
+	}			
+}
+
